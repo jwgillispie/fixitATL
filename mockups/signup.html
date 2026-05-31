@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an account · Fix-ATL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+</head>
+<body class="min-h-screen flex flex-col">
+
+<header class="border-b border-[#EAE6DA] bg-[#FAFAF7]">
+  <div class="container h-[72px] flex items-center justify-between">
+    <a href="landing.html" class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-8 h-8">
+      <span class="wordmark text-[17px]">Fix–ATL</span>
+    </a>
+    <a href="login.html" class="text-sm font-semibold hover:underline underline-offset-4">Already a member? Sign in →</a>
+  </div>
+</header>
+
+<main class="flex-1 grid lg:grid-cols-2">
+
+  <!-- Form -->
+  <div class="flex items-center justify-center p-8 sm:p-16">
+    <div class="w-full max-w-md">
+      <div class="section-label mb-4">Create account</div>
+      <h1 class="font-display-hero text-5xl sm:text-6xl mb-3 leading-[0.95]">
+        Join<br>Fix-ATL.
+      </h1>
+      <p class="text-base ink-2 mb-10">Spot something broken, snap it, send it. We do the rest.</p>
+
+      <form class="space-y-5">
+        <div>
+          <label class="field-label" for="name">Display name</label>
+          <input id="name" type="text" class="input" placeholder="What should we call you?" autocomplete="name">
+          <p class="text-xs ink-3 mt-2">Visible on your reports and public profile</p>
+        </div>
+        <div>
+          <label class="field-label" for="email">Email</label>
+          <input id="email" type="email" class="input" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div>
+          <label class="field-label" for="password">Password</label>
+          <input id="password" type="password" class="input" placeholder="At least 8 characters" autocomplete="new-password">
+        </div>
+        <label class="flex items-start gap-3 text-sm leading-relaxed">
+          <input id="tos" type="checkbox" class="mt-1 w-4 h-4 accent-black">
+          <span class="ink-2">I agree to be cool — reports are public, photos belong to me, I won't submit junk.</span>
+        </label>
+        <button type="button" class="btn btn-accent btn-block btn-lg">
+          Create account
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+
+      <p class="mt-8 text-sm ink-3">
+        Already have an account? <a href="login.html" class="font-semibold text-black underline underline-offset-4">Sign in</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Editorial showcase side -->
+  <aside class="hidden lg:flex flex-col justify-between p-16 dark-surface relative overflow-hidden">
+    <svg class="absolute -bottom-32 -right-20 w-[600px] h-[600px] opacity-10" viewBox="0 0 100 100">
+      <polygon points="50,4 91,27 91,73 50,96 9,73 9,27" fill="#E94E1B"/>
+    </svg>
+
+    <div class="relative">
+      <img src="logo.svg" alt="" class="w-12 h-12 invert">
+    </div>
+
+    <div class="relative max-w-md">
+      <div class="grid grid-cols-2 gap-3 mb-10">
+        <div class="ba-frame rounded-xl aspect-square">
+          <img src="https://picsum.photos/seed/drainbefore/400/400" class="w-full h-full object-cover">
+          <span class="ba-tag">Before</span>
+        </div>
+        <div class="after-frame rounded-xl aspect-square">
+          <div class="photo" style="background-image: url('https://picsum.photos/seed/drainbefore/400/400');"></div>
+          <div class="wash"></div><div class="vignette"></div>
+          <div class="stamp"><img src="logo.svg" alt=""></div>
+          <span class="ba-tag after">After</span>
+        </div>
+      </div>
+      <div class="section-label mb-4">Every fix starts with...</div>
+      <h2 class="font-display-hero text-5xl mb-6 leading-[0.95]">
+        ...someone<br>
+        <span style="color: #E94E1B;">seeing it.</span>
+      </h2>
+      <p class="text-base leading-relaxed" style="color: var(--dark-ink-2);">
+        You don't have to be a contractor or a city official. Just a neighbor with a phone. We take it from there.
+      </p>
+    </div>
+
+    <div class="relative"></div>
+  </aside>
+</main>
+
+<script src="shared.js"></script>
+</body>
+</html>

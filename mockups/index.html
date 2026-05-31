@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix-ATL · Mockups</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+  <style>
+    .frame {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: 0.875rem;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--hair);
+      transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .frame:hover { border-color: var(--ink); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .frame iframe {
+      width: 1600px; height: 1200px;
+      transform: scale(0.34); transform-origin: top left;
+      border: 0; pointer-events: none;
+      display: block;
+    }
+    @media (min-width: 1024px) {
+      .frame iframe { transform: scale(0.28); }
+    }
+  </style>
+</head>
+<body>
+
+<header class="border-b border-[#EAE6DA] bg-[#FAFAF7]/85 backdrop-blur-md sticky top-0 z-40">
+  <div class="container py-5 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="logo.svg" alt="" class="w-9 h-9">
+      <div>
+        <div class="wordmark text-[17px] leading-none">Fix–ATL</div>
+        <div class="text-xs ink-3 mt-0.5 font-mono">Mockups · v2</div>
+      </div>
+    </div>
+    <a href="../FIXATL_MVP_PLAN.md" class="btn btn-quiet btn-sm">📋 MVP plan</a>
+  </div>
+</header>
+
+<!-- Editorial intro -->
+<section class="container pt-16 sm:pt-24 pb-12">
+  <div class="grid lg:grid-cols-12 gap-8 items-end mb-6">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-4">Mockups · 19 screens</div>
+      <h1 class="font-display-hero text-6xl sm:text-7xl lg:text-8xl leading-[0.92]">
+        Every screen.<br>
+        Every state.<br>
+        <span style="color: #E94E1B;">All real design.</span>
+      </h1>
+    </div>
+    <div class="lg:col-span-4">
+      <p class="text-lg ink-2 leading-relaxed max-w-md">
+        Hi-fidelity HTML mockups of the entire Fix-ATL MVP. Click any tile to open the page full-screen. The real Next.js + Firebase build matches these one-to-one.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-wrap gap-2 mt-8">
+    <span class="tag">Inter Tight</span>
+    <span class="tag">Tailwind via CDN</span>
+    <span class="tag">No build step</span>
+    <span class="tag">Standalone HTML</span>
+    <span class="tag">Editorial layout system</span>
+  </div>
+</section>
+
+<!-- PUBLIC -->
+<section class="container py-14 hairline">
+  <div class="grid lg:grid-cols-12 gap-8 items-end mb-10">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-3"><span class="w-2 h-2 rounded-full bg-[#E94E1B]"></span> Public</div>
+      <h2 class="font-display text-4xl sm:text-5xl">Anyone — signed in or not.</h2>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <a href="landing.html" class="block group">
+      <div class="frame"><iframe src="landing.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Landing</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="feed.html" class="block group">
+      <div class="frame"><iframe src="feed.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Feed</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/feed</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="map.html" class="block group">
+      <div class="frame"><iframe src="map.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Map</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/map</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="report-fixed.html" class="block group">
+      <div class="frame"><iframe src="report-fixed.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Report — fixed</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/report/[id]</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="report-broken.html" class="block group">
+      <div class="frame"><iframe src="report-broken.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Report — broken</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/report/[id] · approved</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="profile.html" class="block group">
+      <div class="frame"><iframe src="profile.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Public profile · member</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/profile/[uid]</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="profile-owner.html" class="block group">
+      <div class="frame"><iframe src="profile-owner.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Public profile · owner</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/profile/[uid] · Fixed-by tab</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- STATES & UTILITY -->
+<section class="container py-14 hairline">
+  <div class="grid lg:grid-cols-12 gap-8 items-end mb-10">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-3"><span class="w-2 h-2 rounded-full bg-[#92400E]"></span> States &amp; utility</div>
+      <h2 class="font-display text-4xl sm:text-5xl">Pending, rejected, empty, missing.</h2>
+    </div>
+    <div class="lg:col-span-4">
+      <p class="text-sm ink-2 leading-relaxed">
+        The "in-between" screens. Every status of every flow has a designed view — no white-screen surprises.
+      </p>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <a href="report-pending-member.html" class="block group">
+      <div class="frame"><iframe src="report-pending-member.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Report — pending (member)</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/report/[id] · awaiting review</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="report-pending-owner.html" class="block group">
+      <div class="frame"><iframe src="report-pending-owner.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Report — pending (owner)</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/report/[id] · approve/reject</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="mark-fixed.html" class="block group">
+      <div class="frame"><iframe src="mark-fixed.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Mark-as-fixed dialog</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">modal · upload after photo</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="empty-states.html" class="block group">
+      <div class="frame"><iframe src="empty-states.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Empty states</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">reference page · all 4 variants</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="404.html" class="block group">
+      <div class="frame"><iframe src="404.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">404 · not found</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/404</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- MEMBER -->
+<section class="container py-14 hairline">
+  <div class="grid lg:grid-cols-12 gap-8 items-end mb-10">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-3"><span class="w-2 h-2 rounded-full bg-[#166534]"></span> Member</div>
+      <h2 class="font-display text-4xl sm:text-5xl">Signed in. Submitting reports.</h2>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <a href="submit.html" class="block group">
+      <div class="frame"><iframe src="submit.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Submit report</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/submit</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="account.html" class="block group">
+      <div class="frame"><iframe src="account.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Your account</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/account</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="login.html" class="block group">
+      <div class="frame"><iframe src="login.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Sign in</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/auth/login</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="signup.html" class="block group">
+      <div class="frame"><iframe src="signup.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Create account</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/auth/signup</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section class="container py-14 hairline">
+  <div class="grid lg:grid-cols-12 gap-8 items-end mb-10">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-3"><span class="w-2 h-2 rounded-full bg-[#0A0A0A]"></span> Owner</div>
+      <h2 class="font-display text-4xl sm:text-5xl">Fix-ATL team only. Dark mode.</h2>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <a href="account-owner.html" class="block group">
+      <div class="frame"><iframe src="account-owner.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Owner dashboard</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/account</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="queue.html" class="block group">
+      <div class="frame"><iframe src="queue.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Approval queue</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/account/queue</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+
+    <a href="post.html" class="block group">
+      <div class="frame"><iframe src="post.html"></iframe></div>
+      <div class="mt-4 flex items-start justify-between gap-3">
+        <div>
+          <div class="font-display text-lg">Post a fix</div>
+          <div class="text-xs ink-3 mt-0.5 font-mono">/account/post</div>
+        </div>
+        <span class="text-[#E94E1B] text-sm font-bold opacity-0 group-hover:opacity-100 transition">Open →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Design tokens -->
+<section class="container py-14 hairline">
+  <div class="grid lg:grid-cols-12 gap-8 items-end mb-10">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-3">Design system</div>
+      <h2 class="font-display text-4xl sm:text-5xl">Colors, type, components.</h2>
+    </div>
+  </div>
+
+  <!-- Color swatches -->
+  <div class="grid sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+    <div class="rounded-xl overflow-hidden border border-[#EAE6DA]">
+      <div class="h-28" style="background: #FAFAF7"></div>
+      <div class="p-4">
+        <div class="font-display text-sm">Background</div>
+        <div class="text-xs ink-3 mt-0.5 font-mono">#FAFAF7</div>
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden border border-[#EAE6DA]">
+      <div class="h-28" style="background: #0A0A0A"></div>
+      <div class="p-4">
+        <div class="font-display text-sm">Ink</div>
+        <div class="text-xs ink-3 mt-0.5 font-mono">#0A0A0A</div>
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden border border-[#EAE6DA]">
+      <div class="h-28" style="background: #E94E1B"></div>
+      <div class="p-4">
+        <div class="font-display text-sm">Accent</div>
+        <div class="text-xs ink-3 mt-0.5 font-mono">#E94E1B</div>
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden border border-[#EAE6DA]">
+      <div class="h-28" style="background: #166534"></div>
+      <div class="p-4">
+        <div class="font-display text-sm">Fixed</div>
+        <div class="text-xs ink-3 mt-0.5 font-mono">#166534</div>
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden border border-[#EAE6DA]">
+      <div class="h-28" style="background: #991B1B"></div>
+      <div class="p-4">
+        <div class="font-display text-sm">Broken</div>
+        <div class="text-xs ink-3 mt-0.5 font-mono">#991B1B</div>
+      </div>
+    </div>
+    <div class="rounded-xl overflow-hidden border border-[#EAE6DA]">
+      <div class="h-28" style="background: #92400E"></div>
+      <div class="p-4">
+        <div class="font-display text-sm">Pending</div>
+        <div class="text-xs ink-3 mt-0.5 font-mono">#92400E</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Component preview -->
+  <div class="grid sm:grid-cols-2 gap-6">
+    <div class="card p-8">
+      <div class="eyebrow mb-4">Buttons</div>
+      <div class="flex flex-wrap gap-2">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-accent">Accent</button>
+        <button class="btn btn-ghost">Ghost</button>
+        <button class="btn btn-quiet">Quiet</button>
+      </div>
+    </div>
+    <div class="card p-8">
+      <div class="eyebrow mb-4">Status &amp; tags</div>
+      <div class="flex flex-wrap gap-3 items-center">
+        <span class="status status-fixed">Fixed</span>
+        <span class="status status-broken">Needs fixing</span>
+        <span class="status status-pending">Pending</span>
+        <span class="tag">Drain Cover</span>
+        <span class="tag">Sidewalk</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="container pt-16 pb-24">
+  <div class="dark-surface rounded-3xl p-12 sm:p-20 relative overflow-hidden">
+    <svg class="absolute -top-20 -right-20 w-[400px] h-[400px] opacity-10" viewBox="0 0 100 100">
+      <polygon points="50,4 91,27 91,73 50,96 9,73 9,27" fill="#E94E1B"/>
+    </svg>
+    <div class="relative max-w-3xl">
+      <div class="section-label mb-4" style="color: var(--dark-ink-3);">Next step</div>
+      <h2 class="font-display-hero text-5xl sm:text-6xl mb-6 leading-[0.95]">
+        Ship it.<br>
+        <span style="color: #E94E1B;">Let's build.</span>
+      </h2>
+      <p class="text-lg max-w-2xl leading-relaxed mb-8" style="color: var(--dark-ink-2);">
+        Scaffold the Next.js project, translate these screens into React components, and wire to Firebase per the MVP plan. Every field name, security rule, and data type is already pinned down.
+      </p>
+      <a href="../FIXATL_MVP_PLAN.md" class="btn btn-accent btn-lg">Read the MVP plan →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="hairline py-10">
+  <div class="container flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-7 h-7">
+      <span class="wordmark text-base">Fix–ATL</span>
+      <span class="text-sm ink-3 ml-3">Mockups built for the Fix-ATL community</span>
+    </div>
+    <a href="https://instagram.com/fix_atl" class="text-sm ink-3 hover:text-black">@fix_atl ↗</a>
+  </div>
+</footer>
+
+</body>
+</html>

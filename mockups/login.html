@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in · Fix-ATL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+</head>
+<body class="min-h-screen flex flex-col">
+
+<header class="border-b border-[#EAE6DA] bg-[#FAFAF7]">
+  <div class="container h-[72px] flex items-center justify-between">
+    <a href="landing.html" class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-8 h-8">
+      <span class="wordmark text-[17px]">Fix–ATL</span>
+    </a>
+    <a href="signup.html" class="text-sm font-semibold hover:underline underline-offset-4">Create an account →</a>
+  </div>
+</header>
+
+<main class="flex-1 grid lg:grid-cols-2">
+
+  <!-- Form side -->
+  <div class="flex items-center justify-center p-8 sm:p-16">
+    <div class="w-full max-w-md">
+      <div class="section-label mb-4">Sign in</div>
+      <h1 class="font-display-hero text-5xl sm:text-6xl mb-3 leading-[0.95]">Welcome<br>back.</h1>
+      <p class="text-base ink-2 mb-10">Submit reports, track your impact, see what we've fixed.</p>
+
+      <form class="space-y-5">
+        <div>
+          <label class="field-label" for="email">Email</label>
+          <input id="email" type="email" class="input" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="field-label !mb-0" for="password">Password</label>
+            <a href="#" class="text-xs font-semibold text-[#E94E1B] hover:underline underline-offset-4">Forgot?</a>
+          </div>
+          <input id="password" type="password" class="input" placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button type="button" class="btn btn-primary btn-block btn-lg">
+          Sign in
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+
+      <p class="mt-8 text-sm ink-3">
+        New to Fix-ATL? <a href="signup.html" class="font-semibold text-black underline underline-offset-4">Create an account</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Editorial side -->
+  <aside class="hidden lg:flex flex-col justify-between p-16 dark-surface relative overflow-hidden">
+    <svg class="absolute -top-20 -right-20 w-[500px] h-[500px] opacity-10" viewBox="0 0 100 100">
+      <polygon points="50,4 91,27 91,73 50,96 9,73 9,27" fill="#E94E1B"/>
+    </svg>
+
+    <div class="relative">
+      <img src="logo.svg" alt="" class="w-12 h-12 invert">
+    </div>
+
+    <div class="relative max-w-md">
+      <div class="section-label mb-4">The numbers</div>
+      <h2 class="font-display-hero text-5xl mb-6 leading-[0.95]">
+        68 fixes.<br>
+        1,750 reporters.<br>
+        <span style="color: #E94E1B;">One city.</span>
+      </h2>
+      <p class="text-base leading-relaxed" style="color: var(--dark-ink-2);">
+        Snap a pic of something broken in your neighborhood and we'll go fix it. Join 1,750 Atlantans keeping the city in repair.
+      </p>
+    </div>
+
+    <div class="relative flex items-center gap-4 text-sm" style="color: var(--dark-ink-3);">
+      <div class="flex -space-x-2">
+        <div class="avatar w-9 h-9 border-[#0A0A0A]" style="background: linear-gradient(135deg, #FDBA74, #F472B6);"></div>
+        <div class="avatar w-9 h-9 border-[#0A0A0A]" style="background: linear-gradient(135deg, #86EFAC, #34D399);"></div>
+        <div class="avatar w-9 h-9 border-[#0A0A0A]" style="background: linear-gradient(135deg, #FCD34D, #FB923C);"></div>
+        <div class="avatar w-9 h-9 border-[#0A0A0A]" style="background: linear-gradient(135deg, #C084FC, #818CF8);"></div>
+      </div>
+      <span>and 1,746 more</span>
+    </div>
+  </aside>
+</main>
+
+<script src="shared.js"></script>
+</body>
+</html>

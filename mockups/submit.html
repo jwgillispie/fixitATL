@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report something broken · Fix-ATL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+  <style>
+    .cat-pill input { display: none; }
+    .cat-pill > div {
+      padding: 0.75rem 1rem;
+      border-radius: 0.625rem;
+      border: 1px solid var(--hair-strong);
+      font-size: 0.875rem; font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.12s ease;
+      background: var(--surface);
+    }
+    .cat-pill input:checked + div {
+      background: var(--ink); color: white; border-color: var(--ink); font-weight: 600;
+    }
+    .cat-pill > div:hover { border-color: var(--ink); }
+  </style>
+</head>
+<body>
+
+<header class="sticky top-0 z-40 bg-[#FAFAF7]/85 backdrop-blur-md border-b border-[#EAE6DA]">
+  <div class="container h-[72px] flex items-center justify-between gap-8">
+    <a href="landing.html" class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-8 h-8">
+      <span class="wordmark text-[17px]">Fix–ATL</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 relative">
+      <a href="feed.html" class="nav-link">Feed</a>
+      <a href="map.html" class="nav-link">Map</a>
+      <a href="submit.html" class="nav-link active">Report</a>
+    </nav>
+    <a href="account.html" class="avatar w-9 h-9" style="background: linear-gradient(135deg, #FDBA74, #F472B6);"></a>
+  </div>
+</header>
+
+<main class="container-narrow py-12 sm:py-16">
+
+  <div class="mb-10">
+    <a href="feed.html" class="text-sm ink-3 hover:text-black inline-flex items-center gap-1.5 mb-6">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back to feed
+    </a>
+    <div class="section-label mb-3">New report</div>
+    <h1 class="font-display-hero text-5xl sm:text-6xl mb-4 leading-[0.95]">
+      Spot something<br>broken?
+    </h1>
+    <p class="text-lg ink-2 max-w-xl">Pin it, snap it, send it. We'll review and add it to the fix queue — usually within 24 hours.</p>
+  </div>
+
+  <form class="space-y-10 bg-white p-8 sm:p-10 rounded-2xl border border-[#EAE6DA]">
+
+    <!-- Photo -->
+    <div>
+      <label class="field-label">Photo of what's broken <span class="text-[#991B1B] normal-case">required</span></label>
+      <label for="photo" class="relative block w-full aspect-[4/3] rounded-xl border-2 border-dashed border-[#D6D2C4] bg-[#FAFAF7] cursor-pointer overflow-hidden group hover:border-[#0A0A0A] transition-colors">
+        <div id="photo-preview" class="absolute inset-0 bg-cover bg-center"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+          <div class="w-14 h-14 rounded-full bg-white border border-[#EAE6DA] shadow-sm flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E94E1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+          </div>
+          <div class="font-display text-lg mb-1">Tap to take a photo</div>
+          <div class="text-sm ink-3">or choose one from your library</div>
+        </div>
+      </label>
+      <input id="photo" type="file" accept="image/*" capture="environment" class="hidden" data-preview="photo-preview">
+      <p class="text-xs ink-3 mt-2">JPG or PNG, up to 5MB. We compress automatically.</p>
+    </div>
+
+    <!-- Title -->
+    <div>
+      <label class="field-label" for="title">What's the issue? <span class="text-[#991B1B] normal-case">required</span></label>
+      <input id="title" type="text" class="input" placeholder="e.g. Missing drain cover on Boulevard" maxlength="80">
+      <p class="text-xs ink-3 mt-2 font-mono">0 / 80</p>
+    </div>
+
+    <!-- Category -->
+    <div>
+      <label class="field-label">Category <span class="text-[#991B1B] normal-case">required</span></label>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <label class="cat-pill"><input type="radio" name="cat" checked><div>🕳️ Pothole</div></label>
+        <label class="cat-pill"><input type="radio" name="cat"><div>⭕ Drain Cover</div></label>
+        <label class="cat-pill"><input type="radio" name="cat"><div>💧 Water Lid</div></label>
+        <label class="cat-pill"><input type="radio" name="cat"><div>🚧 Sidewalk</div></label>
+        <label class="cat-pill"><input type="radio" name="cat"><div>🪧 Sign</div></label>
+        <label class="cat-pill"><input type="radio" name="cat"><div>🖌️ Graffiti</div></label>
+        <label class="cat-pill col-span-2"><input type="radio" name="cat"><div>❓ Other</div></label>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div>
+      <label class="field-label">Where is it? <span class="text-[#991B1B] normal-case">required</span></label>
+      <div class="relative">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 z-10" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <input type="text" class="input pl-11" placeholder="Search any address in Atlanta..." value="1247 Boulevard NE">
+      </div>
+      <div class="mt-2 bg-white border border-[#EAE6DA] rounded-xl shadow-sm overflow-hidden">
+        <button type="button" class="w-full text-left px-4 py-3 hover:bg-[#FAFAF7] border-b border-[#EAE6DA] flex items-center gap-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-semibold truncate">1247 Boulevard NE</div>
+            <div class="text-xs ink-3 truncate">Atlanta, GA 30309, USA</div>
+          </div>
+        </button>
+        <button type="button" class="w-full text-left px-4 py-3 hover:bg-[#FAFAF7] border-b border-[#EAE6DA] flex items-center gap-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-semibold truncate">1247 Boulevard SE</div>
+            <div class="text-xs ink-3 truncate">Atlanta, GA 30312, USA</div>
+          </div>
+        </button>
+        <button type="button" class="w-full text-left px-4 py-3 hover:bg-[#FAFAF7] flex items-center gap-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B6B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-semibold truncate">1247 Boulevard Lorraine SW</div>
+            <div class="text-xs ink-3 truncate">Atlanta, GA 30311, USA</div>
+          </div>
+        </button>
+      </div>
+      <p class="text-xs ink-3 mt-2">Powered by Google Places · biased to Atlanta metro</p>
+    </div>
+
+    <!-- Description -->
+    <div>
+      <label class="field-label" for="desc">More details <span class="ink-4 normal-case font-normal">optional</span></label>
+      <textarea id="desc" rows="3" class="input" placeholder="Anything that helps us find it or understand what's needed..." maxlength="500"></textarea>
+    </div>
+
+    <!-- Info banner -->
+    <div class="banner banner-info">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <div>
+        <div class="font-semibold mb-1">What happens next</div>
+        <p>The Fix-ATL team reviews every report. Once approved (usually within 24 hours), it goes live on the public feed and map. You'll see updates in your account.</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col-reverse sm:flex-row gap-3 sm:items-center sm:justify-between pt-2">
+      <a href="feed.html" class="btn btn-ghost justify-center">Cancel</a>
+      <button type="button" class="btn btn-accent btn-lg justify-center">
+        Submit report
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </form>
+</main>
+
+<footer class="hairline py-10 mt-16">
+  <div class="container flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-7 h-7">
+      <span class="wordmark text-base">Fix–ATL</span>
+    </div>
+    <div class="text-sm ink-3">© 2026 Fix-ATL Community Org</div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

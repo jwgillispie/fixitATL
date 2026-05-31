@@ -1,0 +1,49 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // SINGLE SOURCE OF TRUTH for admin emails — must match
+    // src/lib/constants.ts ADMIN_EMAILS and firestore.rules.
+    function isOwner() {
+      return isSignedIn()
+        && request.auth.token.email != null
+        && request.auth.token.email.lower() in [
+             'hipopmarkets@gmail.com'
+           ];
+    }
+
+    function isValidImage() {
+      return request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    // Before photos: any signed-in user can create; only owners can overwrite/delete.
+    match /reports/{reportId}/before.jpg {
+      allow read: if true;
+      allow create: if isSignedIn() && isValidImage();
+      allow update, delete: if isOwner();
+    }
+
+    // After photos: owners only.
+    match /reports/{reportId}/after.jpg {
+      allow read: if true;
+      allow write: if isOwner() && isValidImage();
+    }
+
+    // Avatars: self only.
+    match /users/{uid}/avatar.jpg {
+      allow read: if true;
+      allow write: if isSignedIn() && request.auth.uid == uid && isValidImage();
+    }
+
+    // Deny everything else.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

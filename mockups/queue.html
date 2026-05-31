@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Approval queue · Fix-ATL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+</head>
+<body class="dark-surface">
+
+<header class="sticky top-0 z-40 bg-[#0A0A0A]/85 backdrop-blur-md border-b border-[rgba(255,255,255,0.08)]">
+  <div class="container h-[72px] flex items-center justify-between gap-8">
+    <a href="landing.html" class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-8 h-8">
+      <span class="wordmark text-[17px]" style="color: var(--dark-ink);">Fix–ATL</span>
+      <span class="ml-3 px-2 py-0.5 rounded-full bg-[rgba(233,78,27,0.15)] text-[#E94E1B] text-[10px] font-bold uppercase tracking-wider border border-[rgba(233,78,27,0.3)]">Owner</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 relative">
+      <a href="feed.html" class="nav-link">Feed</a>
+      <a href="map.html" class="nav-link">Map</a>
+      <a href="queue.html" class="nav-link active">
+        Queue
+        <span class="ml-1.5 inline-flex items-center justify-center min-w-[18px] h-[18px] px-1.5 rounded-full bg-[#E94E1B] text-white text-[10px] font-bold">3</span>
+      </a>
+      <a href="post.html" class="nav-link">Post fix</a>
+    </nav>
+    <a href="account-owner.html" class="avatar w-9 h-9 bg-black flex items-center justify-center" style="border-color: var(--dark-hair-strong);">
+      <img src="logo.svg" alt="" class="w-5 h-5">
+    </a>
+  </div>
+</header>
+
+<main class="container py-12 sm:py-16">
+
+  <a href="account-owner.html" class="text-sm ink-3 hover:text-white inline-flex items-center gap-1.5 mb-6">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Owner dashboard
+  </a>
+
+  <div class="grid lg:grid-cols-12 gap-8 mb-12 items-end">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-3">Pending review</div>
+      <h1 class="font-display-hero text-5xl sm:text-6xl lg:text-7xl leading-[0.95]">
+        3 reports.<br>
+        <span style="color: #FCD34D;">Your call.</span>
+      </h1>
+    </div>
+    <div class="lg:col-span-4 lg:text-right">
+      <div class="flex flex-wrap gap-2 lg:justify-end">
+        <button class="filter active" data-group="qfilter">Pending <span class="count">3</span></button>
+        <button class="filter" data-group="qfilter">Approved</button>
+        <button class="filter" data-group="qfilter">Rejected</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+
+    <!-- Item 1 -->
+    <article class="rounded-2xl border border-[rgba(255,255,255,0.1)] overflow-hidden">
+      <div class="grid md:grid-cols-[300px_1fr]">
+        <div class="relative aspect-square md:aspect-auto">
+          <img src="https://picsum.photos/seed/qpending1/600/600" class="w-full h-full object-cover">
+          <span class="absolute top-3 left-3 status-bg status-pending">Pending</span>
+          <span class="absolute bottom-3 left-3 text-[10px] font-mono px-2 py-1 rounded bg-black/70 text-white">2h ago</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="tag">Sidewalk</span>
+            <span class="text-xs ink-3 font-mono">#K2L9M3</span>
+          </div>
+          <h3 class="font-display text-2xl leading-tight mb-3">Cracked sidewalk panel near MLK monument</h3>
+          <p class="text-sm leading-relaxed mb-5 ink-2">
+            Big crack across the width of the sidewalk on Auburn Ave, about 20ft east of the MLK statue. Tripping hazard, especially at night.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-2 text-sm ink-3">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              449 Auburn Ave NE · Old Fourth Ward
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <div class="avatar w-7 h-7" style="background: linear-gradient(135deg, #C084FC, #818CF8); border-color: var(--dark-hair-strong);"></div>
+              <span><b style="color: var(--dark-ink);">@beanmade</b> <span class="ink-3">· 4 reports · 2 fixed</span></span>
+            </div>
+          </div>
+
+          <div class="mt-auto pt-5 border-t border-[rgba(255,255,255,0.08)] flex flex-wrap gap-2">
+            <button class="btn btn-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Approve
+            </button>
+            <button class="btn btn-quiet">Reject…</button>
+            <a href="report-pending-owner.html" class="btn-link text-sm ml-auto self-center">View details →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Item 2 -->
+    <article class="rounded-2xl border border-[rgba(255,255,255,0.1)] overflow-hidden">
+      <div class="grid md:grid-cols-[300px_1fr]">
+        <div class="relative aspect-square md:aspect-auto">
+          <img src="https://picsum.photos/seed/qpending2/600/600" class="w-full h-full object-cover">
+          <span class="absolute top-3 left-3 status-bg status-pending">Pending</span>
+          <span class="absolute bottom-3 left-3 text-[10px] font-mono px-2 py-1 rounded bg-black/70 text-white">5h ago</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="tag">Drain Cover</span>
+            <span class="text-xs ink-3 font-mono">#R8Q3X1</span>
+          </div>
+          <h3 class="font-display text-2xl leading-tight mb-3">Cracked storm drain cover on Highland</h3>
+          <p class="text-sm leading-relaxed mb-5 ink-2">
+            Drain cover has a big diagonal crack — looks like a delivery truck broke it. Could give way completely.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-2 text-sm ink-3">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              1101 N Highland Ave NE · Virginia Highland
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <div class="avatar w-7 h-7" style="background: linear-gradient(135deg, #FDBA74, #FBA74D); border-color: var(--dark-hair-strong);"></div>
+              <span><b style="color: var(--dark-ink);">@disco_ufo</b> <span class="ink-3">· 1 report · first-timer</span></span>
+            </div>
+          </div>
+
+          <div class="mt-auto pt-5 border-t border-[rgba(255,255,255,0.08)] flex flex-wrap gap-2">
+            <button class="btn btn-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Approve
+            </button>
+            <button class="btn btn-quiet">Reject…</button>
+            <a href="report-pending-owner.html" class="btn-link text-sm ml-auto self-center">View details →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Item 3 — with rejection form open -->
+    <article class="rounded-2xl border border-[#E94E1B]/50 overflow-hidden bg-[#161614]">
+      <div class="grid md:grid-cols-[300px_1fr]">
+        <div class="relative aspect-square md:aspect-auto">
+          <img src="https://picsum.photos/seed/qpending3/600/600" class="w-full h-full object-cover">
+          <span class="absolute top-3 left-3 status-bg status-pending">Pending</span>
+          <span class="absolute bottom-3 left-3 text-[10px] font-mono px-2 py-1 rounded bg-black/70 text-white">1d ago</span>
+        </div>
+        <div class="p-6 sm:p-8 flex flex-col">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="tag">Other</span>
+            <span class="text-xs ink-3 font-mono">#Z4W8Y2</span>
+          </div>
+          <h3 class="font-display text-2xl leading-tight mb-3">Trash dumped on lot</h3>
+          <div class="flex items-center gap-2 text-sm ink-3 mb-5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Marietta St · Westside
+          </div>
+
+          <div class="rounded-xl border border-[rgba(252,165,165,0.3)] bg-[rgba(252,165,165,0.05)] p-5">
+            <label class="field-label" style="color: #FCA5A5;">Rejection reason · visible to reporter</label>
+            <textarea rows="2" class="input" style="background: var(--dark-2); border-color: var(--dark-hair-strong); color: var(--dark-ink);">This is illegal dumping — please call 311 to have it removed. Fix-ATL handles infrastructure (drain covers, sidewalks, signs).</textarea>
+            <div class="mt-3 flex gap-2">
+              <button class="btn" style="background: #B91C1C; color: white;">Confirm reject</button>
+              <button class="btn btn-quiet">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="mt-16 text-center text-sm ink-3">
+    🎉 That's all the pending reports. New ones will appear here automatically.
+  </div>
+</main>
+
+<script src="shared.js"></script>
+</body>
+</html>

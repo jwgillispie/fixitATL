@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Large pothole on Edgewood Ave · Fix-ATL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="sticky top-0 z-40 bg-[#FAFAF7]/85 backdrop-blur-md border-b border-[#EAE6DA]">
+  <div class="container h-[72px] flex items-center justify-between gap-8">
+    <a href="landing.html" class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-8 h-8">
+      <span class="wordmark text-[17px]">Fix–ATL</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 relative">
+      <a href="feed.html" class="nav-link">Feed</a>
+      <a href="map.html" class="nav-link">Map</a>
+      <a href="submit.html" class="nav-link">Report</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="account-owner.html" class="btn btn-sm btn-quiet hidden sm:inline-flex">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#E94E1B]"></span>
+        Owner
+      </a>
+      <a href="account-owner.html" class="w-9 h-9 rounded-full bg-[#0A0A0A] border-2 border-white shadow-sm flex items-center justify-center">
+        <img src="logo.svg" alt="" class="w-5 h-5">
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container py-12 sm:py-16">
+
+  <!-- Crumb -->
+  <div class="mb-10 flex items-center gap-2 text-sm ink-3">
+    <a href="feed.html" class="hover:text-black inline-flex items-center gap-1.5">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Feed
+    </a>
+    <span class="ink-4">/</span>
+    <span class="ink-3">Report</span>
+  </div>
+
+  <!-- Editorial header -->
+  <div class="grid lg:grid-cols-12 gap-10 mb-12 items-end">
+    <div class="lg:col-span-8">
+      <div class="flex flex-wrap items-center gap-3 mb-5">
+        <span class="status status-broken">Needs fixing</span>
+        <span class="ink-4 text-xs">·</span>
+        <span class="tag">Pothole</span>
+        <span class="ink-4 text-xs">·</span>
+        <span class="text-xs ink-3 font-mono">Report #A7K3F2</span>
+      </div>
+      <h1 class="font-display-hero text-5xl sm:text-6xl lg:text-7xl mb-6">
+        Large pothole on<br>Edgewood Ave.
+      </h1>
+      <p class="text-xl ink-2 leading-relaxed max-w-2xl">
+        Right in the bike lane heading east, about fifty feet past the streetcar stop. Deep enough that a friend wiped out on it yesterday.
+      </p>
+    </div>
+    <div class="lg:col-span-4 lg:text-right">
+      <div class="eyebrow mb-2">Approved · Awaiting fix</div>
+      <div class="font-display text-3xl">14h 22m</div>
+      <div class="text-sm ink-3 mt-1">in the queue</div>
+    </div>
+  </div>
+
+  <!-- Hero photo + sidebar -->
+  <div class="grid lg:grid-cols-12 gap-8">
+
+    <!-- LEFT: Hero photo + map -->
+    <div class="lg:col-span-8 space-y-6">
+
+      <figure class="ba-frame rounded-2xl">
+        <img src="https://picsum.photos/seed/pothole1/1600/1100" alt="" class="w-full aspect-[16/11] object-cover">
+        <span class="ba-tag">Submitted photo</span>
+      </figure>
+
+      <!-- Location card — editorial, not boxy -->
+      <div class="grid sm:grid-cols-[1fr_auto] items-end gap-4 pt-4 hairline">
+        <div>
+          <div class="eyebrow mb-2">Location</div>
+          <div class="font-display text-2xl mb-1">452 Edgewood Ave SE</div>
+          <div class="ink-3 text-sm">Edgewood · Atlanta, GA 30312 · 33.7530, -84.3691</div>
+        </div>
+        <a href="map.html" class="btn btn-quiet btn-sm">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Open on map
+        </a>
+      </div>
+
+      <!-- Stylized location preview (not iframe — designed mock) -->
+      <div class="relative rounded-2xl overflow-hidden border border-[#EAE6DA]" style="aspect-ratio: 16/8;">
+        <!-- abstract street pattern -->
+        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#EAE6DA" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="800" height="400" fill="#F2EFE7"/>
+          <rect width="800" height="400" fill="url(#grid1)"/>
+          <!-- streets -->
+          <rect x="0" y="180" width="800" height="40" fill="#fff"/>
+          <rect x="380" y="0" width="40" height="400" fill="#fff"/>
+          <rect x="0" y="60" width="800" height="3" fill="#D6D2C4"/>
+          <rect x="0" y="320" width="800" height="3" fill="#D6D2C4"/>
+          <rect x="120" y="0" width="3" height="400" fill="#D6D2C4"/>
+          <rect x="640" y="0" width="3" height="400" fill="#D6D2C4"/>
+          <!-- street labels -->
+          <text x="20" y="170" font-family="Inter" font-size="11" font-weight="600" fill="#6B6B66" letter-spacing="0.05em">EDGEWOOD AVE</text>
+          <text x="395" y="20" font-family="Inter" font-size="11" font-weight="600" fill="#6B6B66" letter-spacing="0.05em" transform="rotate(0)">BOULEVARD</text>
+          <!-- block shapes -->
+          <rect x="20" y="240" width="80" height="60" fill="#EAE6DA" rx="2"/>
+          <rect x="460" y="240" width="100" height="60" fill="#EAE6DA" rx="2"/>
+          <rect x="460" y="80" width="80" height="80" fill="#EAE6DA" rx="2"/>
+        </svg>
+        <!-- pin centered -->
+        <div class="pin" style="top: 50%; left: 50%;">
+          <svg viewBox="0 0 30 38"><path d="M15 0C6.7 0 0 6.7 0 15c0 11.25 15 23 15 23s15-11.75 15-23C30 6.7 23.3 0 15 0z" fill="#991B1B"/><circle cx="15" cy="15" r="6" fill="#fff"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Owner panel + meta -->
+    <aside class="lg:col-span-4 space-y-6">
+
+      <!-- OWNER ACTIONS — proper dark surface, proper light text -->
+      <div class="dark-surface rounded-2xl p-7">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#E94E1B]"></span>
+          <span class="text-[11px] font-semibold tracking-[0.16em] uppercase" style="color: var(--dark-ink-3)">Owner Actions</span>
+        </div>
+        <h3 class="font-display text-2xl mb-2 leading-tight">Ready to fix this?</h3>
+        <p class="text-sm mb-6 leading-relaxed" style="color: var(--dark-ink-2)">
+          Once it's done in the field, upload an after photo. We'll publish the before/after and mark this report fixed.
+        </p>
+
+        <a href="mark-fixed.html" class="btn btn-accent btn-block btn-lg mb-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+          Mark as fixed
+        </a>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <button class="btn btn-quiet btn-sm">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Edit
+          </button>
+          <button class="btn btn-danger btn-sm">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"/></svg>
+            Delete
+          </button>
+        </div>
+      </div>
+
+      <!-- Reporter — editorial, not card -->
+      <div class="pt-2">
+        <div class="eyebrow mb-3">Reported by</div>
+        <a href="profile.html" class="flex items-center gap-3 group">
+          <div class="avatar w-12 h-12" style="background: linear-gradient(135deg, #FDBA74, #F472B6);"></div>
+          <div>
+            <div class="font-semibold text-base group-hover:underline underline-offset-4">jordan</div>
+            <div class="text-sm ink-3">@jordan · 2 reports · 1 fixed</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Timeline — refined, no card wrapping -->
+      <div class="pt-6 hairline">
+        <div class="eyebrow mb-4">Timeline</div>
+        <ol class="timeline">
+          <li class="timeline-item done text-pending"><div class="text-sm ink-1"><b>Submitted</b> by @jordan</div><div class="text-xs ink-3 mt-0.5">1 day ago · Nov 19, 2:14 PM</div></li>
+          <li class="timeline-item done text-broken"><div class="text-sm ink-1"><b>Approved</b> by Fix-ATL Team</div><div class="text-xs ink-3 mt-0.5">14 hours ago · Nov 20, 3:30 AM</div></li>
+          <li class="timeline-item pending ink-3"><div class="text-sm"><b>Awaiting fix</b></div><div class="text-xs mt-0.5">Pending field work</div></li>
+        </ol>
+      </div>
+
+      <!-- Share row -->
+      <div class="flex items-center gap-2 pt-2">
+        <button class="btn btn-quiet btn-sm">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy link
+        </button>
+        <button class="btn btn-quiet btn-sm">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share
+        </button>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- Other reports nearby -->
+<section class="hairline mt-20 py-16 bg-[#F2EFE7]/40">
+  <div class="container">
+    <div class="flex items-end justify-between mb-8 gap-4 flex-wrap">
+      <div>
+        <div class="section-label mb-2">Nearby reports</div>
+        <h2 class="font-display text-3xl">Within 0.5 miles</h2>
+      </div>
+      <a href="map.html" class="btn-link text-sm">See on map</a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <a href="report-broken.html" class="card card-hover">
+        <div class="relative aspect-[5/4]"><img src="https://picsum.photos/seed/sign1/600/480" class="w-full h-full object-cover"></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2"><span class="status status-broken">Needs fixing</span><span class="tag">Sign</span></div>
+          <h3 class="font-display text-lg leading-tight">Faded stop sign at Sinclair</h3>
+          <p class="text-sm ink-3 mt-1">Inman Park · 0.3 mi · 2d</p>
+        </div>
+      </a>
+      <a href="report-fixed.html" class="card card-hover">
+        <div class="relative aspect-[5/4] ba-frame">
+          <img src="https://picsum.photos/seed/drainbefore/600/480" class="w-full h-full object-cover">
+        </div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2"><span class="status status-fixed">Fixed</span><span class="tag">Drain Cover</span></div>
+          <h3 class="font-display text-lg leading-tight">Missing drain cover on Boulevard</h3>
+          <p class="text-sm ink-3 mt-1">Old Fourth Ward · 0.4 mi · 3d</p>
+        </div>
+      </a>
+      <a href="report-broken.html" class="card card-hover">
+        <div class="relative aspect-[5/4]"><img src="https://picsum.photos/seed/graffiti1/600/480" class="w-full h-full object-cover"></div>
+        <div class="p-5">
+          <div class="flex items-center gap-2 mb-2"><span class="status status-broken">Needs fixing</span><span class="tag">Graffiti</span></div>
+          <h3 class="font-display text-lg leading-tight">Tagging on retaining wall</h3>
+          <p class="text-sm ink-3 mt-1">Little Five Points · 0.5 mi · 4d</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="hairline py-10">
+  <div class="container flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-7 h-7">
+      <span class="wordmark text-base">Fix–ATL</span>
+      <span class="text-sm ink-3 ml-3">Est. 2026 · Atlanta, GA</span>
+    </div>
+    <div class="text-sm ink-3">© 2026 Fix-ATL Community Org</div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

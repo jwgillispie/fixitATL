@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner dashboard · Fix-ATL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+</head>
+<body class="dark-surface">
+
+<header class="sticky top-0 z-40 bg-[#0A0A0A]/85 backdrop-blur-md border-b border-[rgba(255,255,255,0.08)]">
+  <div class="container h-[72px] flex items-center justify-between gap-8">
+    <a href="landing.html" class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-8 h-8">
+      <span class="wordmark text-[17px]" style="color: var(--dark-ink);">Fix–ATL</span>
+      <span class="ml-3 px-2 py-0.5 rounded-full bg-[rgba(233,78,27,0.15)] text-[#E94E1B] text-[10px] font-bold uppercase tracking-wider border border-[rgba(233,78,27,0.3)]">Owner</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 relative">
+      <a href="feed.html" class="nav-link">Feed</a>
+      <a href="map.html" class="nav-link">Map</a>
+      <a href="queue.html" class="nav-link">
+        Queue
+        <span class="ml-1.5 inline-flex items-center justify-center min-w-[18px] h-[18px] px-1.5 rounded-full bg-[#E94E1B] text-white text-[10px] font-bold">3</span>
+      </a>
+      <a href="post.html" class="nav-link">Post fix</a>
+    </nav>
+    <div class="avatar w-9 h-9 bg-black flex items-center justify-center" style="border-color: var(--dark-hair-strong);">
+      <img src="logo.svg" alt="" class="w-5 h-5">
+    </div>
+  </div>
+</header>
+
+<main class="container py-12 sm:py-16">
+
+  <!-- Editorial header -->
+  <div class="grid lg:grid-cols-12 gap-8 mb-16 items-end">
+    <div class="lg:col-span-8">
+      <div class="section-label mb-4">Owner dashboard</div>
+      <h1 class="font-display-hero text-5xl sm:text-6xl lg:text-7xl mb-4 leading-[0.95]">
+        Welcome back,<br>
+        <span style="color: #E94E1B;">team. 🌼</span>
+      </h1>
+      <p class="text-lg max-w-xl" style="color: var(--dark-ink-2);">
+        3 new reports waiting on you. Here's what's happening across the city.
+      </p>
+    </div>
+    <div class="lg:col-span-4 lg:text-right">
+      <div class="eyebrow mb-2">Signed in as</div>
+      <div class="font-display text-2xl">Fix-ATL Team</div>
+      <div class="text-sm mt-1" style="color: var(--dark-ink-3);">team@fixatl.com · Owner</div>
+    </div>
+  </div>
+
+  <!-- Stats grid -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-[rgba(255,255,255,0.1)] rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
+    <a href="queue.html" class="bg-[#0A0A0A] p-7 hover:bg-[#161614] transition-colors group">
+      <div class="flex items-center justify-between mb-4">
+        <div class="eyebrow" style="color: #FCD34D;">Pending</div>
+        <span class="w-2 h-2 rounded-full bg-[#FCD34D] animate-pulse"></span>
+      </div>
+      <div class="font-display-hero text-6xl">3</div>
+      <div class="text-sm mt-2 ink-3 group-hover:underline underline-offset-4">Review now →</div>
+    </a>
+    <a href="feed.html" class="bg-[#0A0A0A] p-7 hover:bg-[#161614] transition-colors">
+      <div class="eyebrow mb-4" style="color: #FCA5A5;">Awaiting fix</div>
+      <div class="font-display-hero text-6xl">23</div>
+      <div class="text-sm mt-2 ink-3">Out in the city</div>
+    </a>
+    <div class="bg-[#0A0A0A] p-7">
+      <div class="eyebrow mb-4" style="color: #4ADE80;">Fixed all-time</div>
+      <div class="font-display-hero text-6xl" style="color: #4ADE80;">68</div>
+      <div class="text-sm mt-2 ink-3">Painted with 🌼</div>
+    </div>
+    <div class="bg-[#0A0A0A] p-7">
+      <div class="eyebrow mb-4">This week</div>
+      <div class="font-display-hero text-6xl">7</div>
+      <div class="text-sm mt-2 ink-3">New fixes posted</div>
+    </div>
+  </div>
+
+  <!-- Quick actions -->
+  <div class="grid sm:grid-cols-2 gap-4 mt-8">
+    <a href="queue.html" class="rounded-2xl border border-[rgba(255,255,255,0.1)] hover:border-[#E94E1B] p-7 flex items-center gap-5 transition-colors group">
+      <div class="w-14 h-14 rounded-xl bg-[rgba(252,211,77,0.15)] flex items-center justify-center text-2xl flex-shrink-0">📋</div>
+      <div class="flex-1">
+        <h3 class="font-display text-2xl mb-1 leading-tight">Review the queue</h3>
+        <p class="text-sm ink-3">3 reports waiting for approval</p>
+      </div>
+      <span class="text-[#E94E1B] text-xl group-hover:translate-x-1 transition-transform">→</span>
+    </a>
+    <a href="post.html" class="rounded-2xl border border-[rgba(255,255,255,0.1)] hover:border-[#E94E1B] p-7 flex items-center gap-5 transition-colors group">
+      <div class="w-14 h-14 rounded-xl bg-[rgba(233,78,27,0.15)] flex items-center justify-center text-2xl flex-shrink-0">🌼</div>
+      <div class="flex-1">
+        <h3 class="font-display text-2xl mb-1 leading-tight">Post a fix</h3>
+        <p class="text-sm ink-3">Upload a before+after directly</p>
+      </div>
+      <span class="text-[#E94E1B] text-xl group-hover:translate-x-1 transition-transform">→</span>
+    </a>
+  </div>
+
+  <!-- Recent activity -->
+  <section class="mt-20">
+    <div class="flex items-end justify-between mb-8 gap-4 flex-wrap">
+      <div>
+        <div class="section-label mb-3">Recent activity</div>
+        <h2 class="font-display text-4xl">What's happened today.</h2>
+      </div>
+      <a href="feed.html" class="btn btn-quiet btn-sm">View all</a>
+    </div>
+
+    <div class="space-y-3">
+      <div class="rounded-xl border border-[rgba(255,255,255,0.1)] hover:bg-[#161614] flex items-center gap-5 p-5 transition-colors">
+        <div class="w-11 h-11 rounded-full bg-[rgba(74,222,128,0.15)] flex items-center justify-center text-xl flex-shrink-0">🌼</div>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm"><b>You</b> marked <b>Missing drain cover on Boulevard</b> as fixed.</p>
+          <p class="text-xs ink-3 mt-1">3 days ago · Old Fourth Ward · Reporter: @beanmade</p>
+        </div>
+        <a href="report-fixed.html" class="btn btn-quiet btn-sm">View</a>
+      </div>
+      <div class="rounded-xl border border-[rgba(255,255,255,0.1)] hover:bg-[#161614] flex items-center gap-5 p-5 transition-colors">
+        <div class="w-11 h-11 rounded-full bg-[rgba(252,165,165,0.12)] flex items-center justify-center text-xl flex-shrink-0">✅</div>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm"><b>You</b> approved <b>Large pothole on Edgewood Ave</b>.</p>
+          <p class="text-xs ink-3 mt-1">14 hours ago · Edgewood · Reporter: @jordan</p>
+        </div>
+        <a href="report-broken.html" class="btn btn-quiet btn-sm">View</a>
+      </div>
+      <div class="rounded-xl border border-[rgba(255,255,255,0.1)] hover:bg-[#161614] flex items-center gap-5 p-5 transition-colors">
+        <div class="w-11 h-11 rounded-full bg-[rgba(252,211,77,0.15)] flex items-center justify-center text-xl flex-shrink-0">📨</div>
+        <div class="flex-1 min-w-0">
+          <p class="text-sm"><b>@beanmade</b> submitted a new report.</p>
+          <p class="text-xs ink-3 mt-1">2 hours ago · Sidewalk · Virginia Highland</p>
+        </div>
+        <a href="queue.html" class="btn btn-quiet btn-sm">Review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign out -->
+  <div class="mt-16 pt-8 border-t border-[rgba(255,255,255,0.1)] flex flex-wrap items-center justify-between gap-4">
+    <p class="text-sm ink-3">Signed in as <b style="color: var(--dark-ink);">Fix-ATL Team</b> · team@fixatl.com</p>
+    <a href="login.html" class="text-sm text-[#FCA5A5] font-semibold hover:underline">Sign out</a>
+  </div>
+</main>
+
+<script src="shared.js"></script>
+</body>
+</html>

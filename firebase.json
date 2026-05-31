@@ -1,0 +1,22 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      { "source": "/report/*",             "destination": "/report/_/index.html" },
+      { "source": "/profile/*",            "destination": "/profile/_/index.html" },
+      { "source": "/account/mark-fixed/*", "destination": "/account/mark-fixed/_/index.html" }
+    ]
+  }
+}

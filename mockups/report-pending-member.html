@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pothole report · pending review · Fix-ATL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="icon" href="logo.svg">
+</head>
+<body>
+
+<header class="sticky top-0 z-40 bg-[#FAFAF7]/85 backdrop-blur-md border-b border-[#EAE6DA]">
+  <div class="container h-[72px] flex items-center justify-between gap-8">
+    <a href="landing.html" class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-8 h-8">
+      <span class="wordmark text-[17px]">Fix–ATL</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 relative">
+      <a href="feed.html" class="nav-link">Feed</a>
+      <a href="map.html" class="nav-link">Map</a>
+      <a href="submit.html" class="nav-link">Report</a>
+    </nav>
+    <a href="account.html" class="avatar w-9 h-9" style="background: linear-gradient(135deg, #FDBA74, #F472B6);"></a>
+  </div>
+</header>
+
+<main class="container py-12 sm:py-16">
+
+  <div class="mb-10 flex items-center gap-2 text-sm ink-3">
+    <a href="account.html" class="hover:text-black inline-flex items-center gap-1.5">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Your account
+    </a>
+    <span class="ink-4">/</span>
+    <span class="ink-3">Pending report</span>
+  </div>
+
+  <!-- Visibility banner -->
+  <div class="banner banner-warn mb-10 rounded-2xl border" style="background: var(--pending-soft); border-color: #FCD34D; color: var(--pending);">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <div>
+      <div class="font-semibold mb-0.5">Only you and the Fix-ATL team can see this right now.</div>
+      <p class="text-sm">It'll go live on the public feed &amp; map once an owner approves it. Most reports are reviewed within 24 hours.</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="grid lg:grid-cols-12 gap-10 mb-12 items-end">
+    <div class="lg:col-span-8">
+      <div class="flex flex-wrap items-center gap-3 mb-5">
+        <span class="status status-pending">Pending review</span>
+        <span class="ink-4 text-xs">·</span>
+        <span class="tag">Pothole</span>
+        <span class="ink-4 text-xs">·</span>
+        <span class="text-xs ink-3 font-mono">#A7K3F2</span>
+      </div>
+      <h1 class="font-display-hero text-5xl sm:text-6xl lg:text-7xl mb-6">
+        Large pothole on<br>Edgewood Ave.
+      </h1>
+      <p class="text-xl ink-2 leading-relaxed max-w-2xl">
+        Right in the bike lane heading east, about fifty feet past the streetcar stop. Deep enough that a friend wiped out on it yesterday.
+      </p>
+    </div>
+    <div class="lg:col-span-4 lg:text-right">
+      <div class="eyebrow mb-2">In queue for</div>
+      <div class="font-display text-3xl">1h 23m</div>
+      <div class="text-sm ink-3 mt-1">avg review: ~18h</div>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid lg:grid-cols-12 gap-8">
+
+    <div class="lg:col-span-8 space-y-6">
+      <figure class="ba-frame rounded-2xl">
+        <img src="https://picsum.photos/seed/pothole1/1600/1100" class="w-full aspect-[16/11] object-cover">
+        <span class="ba-tag">Your submission</span>
+      </figure>
+
+      <div class="grid sm:grid-cols-[1fr_auto] items-end gap-4 pt-4 hairline">
+        <div>
+          <div class="eyebrow mb-2">Location</div>
+          <div class="font-display text-2xl mb-1">452 Edgewood Ave SE</div>
+          <div class="ink-3 text-sm">Edgewood · Atlanta, GA 30312</div>
+        </div>
+        <span class="text-sm ink-3 italic">Map will appear once approved</span>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="lg:col-span-4 space-y-8">
+
+      <!-- What happens next -->
+      <div class="rounded-2xl border border-[#EAE6DA] bg-white p-6">
+        <div class="eyebrow mb-4">What happens next</div>
+        <ol class="space-y-4">
+          <li class="flex gap-3">
+            <div class="w-7 h-7 rounded-full bg-[#0A0A0A] text-white flex items-center justify-center text-xs font-mono font-bold flex-shrink-0">1</div>
+            <div>
+              <div class="font-semibold text-sm">Fix-ATL team reviews</div>
+              <div class="text-xs ink-3 mt-0.5">Usually within 24 hours. They confirm the report is something they can fix.</div>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <div class="w-7 h-7 rounded-full bg-[#0A0A0A] text-white flex items-center justify-center text-xs font-mono font-bold flex-shrink-0">2</div>
+            <div>
+              <div class="font-semibold text-sm">Goes live publicly</div>
+              <div class="text-xs ink-3 mt-0.5">Appears on the feed and map as <span class="status status-broken">Needs fixing</span></div>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <div class="w-7 h-7 rounded-full bg-[#0A0A0A] text-white flex items-center justify-center text-xs font-mono font-bold flex-shrink-0">3</div>
+            <div>
+              <div class="font-semibold text-sm">Team goes to fix it</div>
+              <div class="text-xs ink-3 mt-0.5">When it's done, they post an after photo and the status flips to <span class="status status-fixed">Fixed</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Timeline -->
+      <div>
+        <div class="eyebrow mb-4">Timeline</div>
+        <ol class="timeline">
+          <li class="timeline-item done text-pending">
+            <div class="text-sm ink-1"><b>You submitted this</b></div>
+            <div class="text-xs ink-3 mt-0.5">1h 23m ago · Nov 20, 4:22 PM</div>
+          </li>
+          <li class="timeline-item pending ink-3">
+            <div class="text-sm"><b>Awaiting review</b></div>
+            <div class="text-xs mt-0.5">By Fix-ATL Team</div>
+          </li>
+          <li class="timeline-item pending ink-3">
+            <div class="text-sm">Approved</div>
+          </li>
+          <li class="timeline-item pending ink-3">
+            <div class="text-sm">Fixed</div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Actions -->
+      <div class="pt-6 hairline space-y-2">
+        <div class="eyebrow mb-3">Manage</div>
+        <button class="btn btn-quiet btn-block">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          Edit details
+        </button>
+        <button class="btn btn-ghost btn-block" style="color: #991B1B; border-color: #FCA5A5;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"/></svg>
+          Withdraw report
+        </button>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="hairline py-10 mt-16">
+  <div class="container flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2.5">
+      <img src="logo.svg" alt="" class="w-7 h-7">
+      <span class="wordmark text-base">Fix–ATL</span>
+    </div>
+    <div class="text-sm ink-3">© 2026 Fix-ATL Community Org</div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>
