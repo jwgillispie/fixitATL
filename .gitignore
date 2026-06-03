@@ -51,6 +51,15 @@ serviceAccountKey*.json
 # vercel
 .vercel
 
+# Internal planning docs + scaffolding (kept locally, not for the public repo)
+FIXATL_MVP_PLAN.md
+FIXATL_WEEK_PLAN.md
+_AGENT_CONTEXT.md
+mockups/
+
+# Local dev tooling
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

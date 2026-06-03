@@ -40,9 +40,6 @@ firestore.rules               # Email-based isOwner check
 storage.rules                 # Email-based isOwner check
 firestore.indexes.json        # Composite indexes for feed/queue queries
 firebase.json                 # Hosting config + dynamic-route rewrites
-mockups/                      # Original hi-fi HTML mockups (reference)
-FIXATL_MVP_PLAN.md            # Full data model + architecture spec
-FIXATL_WEEK_PLAN.md           # 7-day build schedule
 ```
 
 ## Local setup
@@ -88,7 +85,7 @@ The new email becomes an owner the moment they sign up — no scripts, no consol
 
 ## Data model
 
-See [FIXATL_MVP_PLAN.md § 6](./FIXATL_MVP_PLAN.md) for the locked schema. Field names are `camelCase`, every optional field is explicit `null` not `undefined`, denormalized strings (`createdByDisplayName`, `fixedByDisplayName`) are snapshotted at write time to avoid joins.
+See `src/types/user.ts` and `src/types/report.ts` for the locked schema. Field names are `camelCase`, every optional field is explicit `null` not `undefined`, denormalized strings (`createdByDisplayName`, `fixedByDisplayName`) are snapshotted at write time to avoid joins. New fields require updating the type, the security rules, and any read sites consistently — don't extend ad-hoc.
 
 ## License
 
